@@ -1,0 +1,65 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #3b3b3b;
+}
+ul,
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    all: unset;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: 0.5px solid #ccc;
+}
+/* 전체영역 */
+.amomento-wrap{
+    width: 100vw;
+    padding: 1%;
+    margin: auto;
+}
+/* footer */
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.footer-top{
+    display: flex;
+    width: 100%;
+}
+.footer-top li{
+    width: calc(100% / 4);
+}
+.footer-logo img{
+    width: 30%;
+}
+.footerMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.copy{
+    display: flex;
+    gap: 0.5%;
+}
+#copyMore{
+    cursor: pointer;
+}
+.copyTxt{
+    font-size: 12px;
+    display: none;
+}
+.copyTxt.open{
+    display: block;
+}
