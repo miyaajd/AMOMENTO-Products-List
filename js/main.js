@@ -1,9 +1,39 @@
-window.addEventListener("load", function(){
-    const copyBtn =this.document.querySelector("#copyMore")
-    const copyTxt =this.document.querySelector(".copyTxt")
-    copyBtn.addEventListener("click" ,(e)=>{
-        const isOpen = copyTxt.classList.toggle("open")
-        copyBtn.textContent = isOpen ? "-" : "+";
-        e.currentTarget.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    })
-})
+window.addEventListener("load", function () {
+  const copyBtn = this.document.querySelector("#copyMore");
+  const copyTxt = this.document.querySelector(".copyTxt");
+  copyBtn.addEventListener("click", (e) => {
+    const isOpen = copyTxt.classList.toggle("open");
+    copyBtn.textContent = isOpen ? "-" : "+";
+    e.currentTarget.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+  // help Btn
+  const helpBtn = this.document.querySelector("#helpBtn");
+  const helpwrap = this.document.querySelector(".helpwrap");
+  helpBtn.addEventListener("click", (e) => {
+    helpwrap.classList.toggle("open");
+    helpBtn.style.transform = "scale(0.8)";
+    this.setTimeout(() => {
+      helpBtn.style.transform = "scale(1)";
+    }, 150);
+    const isClick = helpBtn.classList.toggle("click");
+    helpBtn.textContent = isClick ? "✕" : "Help";
+    e.currentTarget.setAttribute("aria-expanded", isClick ? "true" : "false");
+  });
+  const helpMenuBtn = this.document.querySelectorAll(".helpMenu > li > button");
+  const helpMenu = this.document.querySelectorAll(
+    ".helpMenu > li > button >i, .helpMenu > li > button >span"
+  );
+
+  helpMenuBtn.forEach((button) => {
+    button.addEventListener("click", () => {
+      helpMenu.forEach((menu) => {
+        menu.classList.remove("active");
+      });
+      helpMenu.forEach((m) => {
+        if (button.contains(m)) {
+          m.classList.add("active");
+        }
+      });
+    });
+  });
+});

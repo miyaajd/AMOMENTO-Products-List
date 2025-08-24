@@ -19,6 +19,14 @@
       href="assets/favicon/apple-touch-icon.png"
     />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- css -->
     <link rel="stylesheet" href="css/main.css" />
     <!-- js -->
@@ -26,7 +34,44 @@
   </head>
   <body>
     <!-- help btn -->
-     <button id="helpBtn">Help</button>
+    <button id="helpBtn" aria-expanded="false">Help</button>
+    <!-- help box -->
+    <div class="helpwrap">
+      <div class="helpTitle">
+        <div class="helpLogoImg">
+          <img src="images/amomento/helpLogo.png" alt="logo" />
+        </div>
+        <h1>AMOMENTO</h1>
+      </div>
+      <div class="helpBox">
+        <div class="helpBox-top">
+          <div class="helpLogoImg helpSub">
+            <img src="images/amomento/helpLogo.png" alt="img" />
+          </div>
+          <ul class="helpTxt">
+            <li><strong>AMOMENTO</strong></li>
+            <li>안녕하세요 고객님, 아모멘토입니다.</li>
+            <li>상담 원하시는 문의내용을 선택해주세요.</li>
+            <li><br></li>
+            <li>[운영시간]</li>
+            <li>월 - 금 : 10:00 ~ 17:00</li>
+            <li>점심시간 : 12:00 ~ 13:00</li>
+            <li>*토, 일, 공휴일은 상담이 어려운 점 양해 부탁드립니다.</li>
+          </ul>
+        </div>
+        <div class="helpBox-bottom">
+          <button id="direct">
+            문의하기 <i class="fa-regular fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+      <a href="#"><strong>채널톡</strong> 이용중</a>
+      <ul class="helpMenu">
+        <li><button><i class="fa-solid fa-house active"></i><span class="active">홈</span></button></li>
+        <li><button><i class="fa-regular fa-comment"></i><span>대화</span></button></li>
+        <li><button><i class="fa-solid fa-gear"></i><span>설정</span></button></li>
+      </ul>
+    </div>
     <!-- 전체영역 -->
     <div class="amomento-wrap">
       <!-- header -->
