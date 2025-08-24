@@ -1,3 +1,10 @@
 # AMOMENTO-Products-List
 이 프로젝트는 [Amomento]를 참고하여 제작한 클론 코딩 프로젝트입니다.  
 개인 학습 및 포트폴리오용으로만 사용하며, 상업적 목적은 전혀 없습니다.
+<!--  -->
+Points
+✱ goTop BTN
+✱ Help BTN 활성화 -> Help 창 오픈
+✱ 상품이미지 hover -> 이미지 바뀜
+✱ 솔드아웃 상품 이미지 블러처리 + sold out 텍스트 추가(클래스 재사용)
+✱ footer 정보 열고 닫기
