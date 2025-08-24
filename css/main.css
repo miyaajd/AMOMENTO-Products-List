@@ -20,6 +20,19 @@ button {
   border: 0.5px solid #ccc;
   display: block;
 }
+img {
+  display: block;
+}
+/* goTop */
+#goTop{
+    border: none;
+    font-size: 1.1rem;
+    position: fixed;
+    right: 1%;
+    bottom: 10%;
+    text-align: center;
+    line-height: 1;
+}
 /* helpBtn */
 #helpBtn {
   border-style: none;
@@ -50,12 +63,11 @@ button {
   visibility: hidden;
   box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
-
 }
-.helpwrap.open{
-    opacity: 1;
-    visibility: visible;
-    bottom: 9%;
+.helpwrap.open {
+  opacity: 1;
+  visibility: visible;
+  bottom: 9%;
 }
 .helpwrap h1,
 .helpwrap li,
@@ -161,18 +173,46 @@ button {
   font-size: 1.3rem;
 }
 .helpMenu i,
-.helpMenu span{
-    color: #aaa;
+.helpMenu span {
+  color: #aaa;
 }
 .helpMenu i.active,
-.helpMenu span.active{
-    color: #efefef;
+.helpMenu span.active {
+  color: #efefef;
 }
 /* 전체영역 */
 .amomento-wrap {
   width: 100vw;
-  padding: 1%;
+  padding: 0 1% 1%;
   margin: auto;
+}
+
+/* header */
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #ddd; */
+}
+.nav {
+  width: 45%;
+  display: flex;
+  gap: 1rem;
+}
+.headerImg {
+  width: 15%;
+  margin: auto;
+}
+.headerImg img {
+  width: 50%;
+  margin: auto;
+}
+.util {
+  width: 45%;
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
 }
 /* footer */
 .footer {

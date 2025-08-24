@@ -36,4 +36,13 @@ window.addEventListener("load", function () {
       });
     });
   });
+  //
+  //goTop
+  const goTop = this.document.querySelector("#goTop");
+  goTop.addEventListener("click", () => {
+    this.window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });
