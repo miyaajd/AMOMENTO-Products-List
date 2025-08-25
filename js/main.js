@@ -71,4 +71,20 @@ window.addEventListener("load", function () {
   modalClose.addEventListener("click", () => {
     modal.classList.add("none");
   });
+  //
+  //
+  // 1000px
+  const mobileMenuBtn = this.document.querySelector("#mobileMenu");
+  const mobileMenu = this.document.querySelector(".mobileMenuOpen");
+  const overlay = this.document.querySelector(".mobileOverlay");
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenu.classList.add("active");
+    overlay.classList.add("show");
+    this.document.documentElement.style.overflow = "hidden";
+  });
+  overlay.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("show");
+    this.document.documentElement.style.overflow = "";
+  });
 });
