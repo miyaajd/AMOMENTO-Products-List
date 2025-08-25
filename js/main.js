@@ -1,4 +1,12 @@
 window.addEventListener("load", function () {
+  const aTag = this.document.querySelectorAll("a");
+  aTag.forEach((a) => {
+    a.addEventListener("click", (e) => {
+      if (a.getAttribute("href") === "#") {
+        e.preventDefault();
+      }
+    });
+  });
   const copyBtn = this.document.querySelector("#copyMore");
   const copyTxt = this.document.querySelector(".copyTxt");
   copyBtn.addEventListener("click", (e) => {
