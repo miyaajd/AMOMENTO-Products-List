@@ -30,7 +30,10 @@
       content="https://miyaajd.github.io/AMOMENTO-Products-List/images/amomento/helpLogo.png"
     />
     <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
-    <meta property="og:description" content="Amomento 상품목록 연습페이지입니다." />
+    <meta
+      property="og:description"
+      content="Amomento 상품목록 연습페이지입니다."
+    />
     <!-- favicon -->
     <link
       rel="icon"
@@ -60,6 +63,29 @@
     <script src="js/main.js"></script>
   </head>
   <body>
+    <!-- modal -->
+    <div class="modalWrap">
+      <div class="modalBox">
+        <div class="modalLogo">
+          <img src="images/amomento/helpLogo.png" alt="modalImg" />
+        </div>
+        <p class="modalDscr">
+          이 프로젝트는 <strong>[Amomento]</strong> 를 참고하여 <span>스터디용</span>으로 제작되었습니다.
+          개인 학습 및 포트폴리오용으로만 사용하며, 상업적 목적은 전혀 없습니다.
+        </p>
+        <ul class="points"><strong>Points</strong> 
+        <li>‣ Modal</li>
+        <li>‣ goTop BTN</li>
+        <li>‣ Help BTN 활성화 → Help 창 오픈</li>
+        <li>‣ Help 창 메뉴 버튼 클릭 활성화</li>
+        <li>‣ Help 창 열릴 때 마다 첫번째 버튼 활성화로 초기화</li>
+        <li>‣ 상품이미지 hover → 이미지 바뀜</li>
+        <li>‣ 솔드아웃 상품 이미지 블러처리 + sold out 텍스트 추가(클래스 재사용)</li>
+        <li>‣ footer 정보 열고 닫기</li>
+        </ul>
+        <button id="modalClose">× Close</button>
+      </div>
+    </div>
     <!-- goTop -->
     <button id="goTop">⌃<br />TOP</button>
     <!-- help btn -->

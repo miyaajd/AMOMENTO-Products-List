@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
   const helpBtn = this.document.querySelector("#helpBtn");
   const helpwrap = this.document.querySelector(".helpwrap");
   helpBtn.addEventListener("click", (e) => {
-    helpwrap.classList.toggle("open");
+    const isOpenHelp = helpwrap.classList.toggle("open");
     helpBtn.style.transform = "scale(0.8)";
     this.setTimeout(() => {
       helpBtn.style.transform = "scale(1)";
@@ -18,24 +18,35 @@ window.addEventListener("load", function () {
     const isClick = helpBtn.classList.toggle("click");
     helpBtn.textContent = isClick ? "✕" : "Help";
     e.currentTarget.setAttribute("aria-expanded", isClick ? "true" : "false");
-  });
-  const helpMenuBtn = this.document.querySelectorAll(".helpMenu > li > button");
-  const helpMenu = this.document.querySelectorAll(
-    ".helpMenu > li > button >i, .helpMenu > li > button >span"
-  );
-
-  helpMenuBtn.forEach((button) => {
-    button.addEventListener("click", () => {
+    const helpMenuBtn = this.document.querySelectorAll(
+      ".helpMenu > li > button"
+    );
+    const helpMenu = this.document.querySelectorAll(
+      ".helpMenu > li > button >i, .helpMenu > li > button >span"
+    );
+    if (isOpenHelp) {
       helpMenu.forEach((menu) => {
         menu.classList.remove("active");
       });
-      helpMenu.forEach((m) => {
-        if (button.contains(m)) {
-          m.classList.add("active");
-        }
+      if (helpMenu.length > 0) {
+        helpMenu[0].classList.add("active");
+        helpMenu[1].classList.add("active");
+      }
+    }
+    helpMenuBtn.forEach((button) => {
+      button.addEventListener("click", () => {
+        helpMenu.forEach((menu) => {
+          menu.classList.remove("active");
+        });
+        helpMenu.forEach((m) => {
+          if (button.contains(m)) {
+            m.classList.add("active");
+          }
+        });
       });
     });
   });
+
   //
   //goTop
   const goTop = this.document.querySelector("#goTop");
@@ -44,5 +55,12 @@ window.addEventListener("load", function () {
       top: 0,
       behavior: "smooth",
     });
+  });
+  //
+  // modal
+  const modalClose = this.document.querySelector("#modalClose");
+  const modal = this.document.querySelector(".modalWrap");
+  modalClose.addEventListener("click", () => {
+    modal.classList.add("none");
   });
 });
